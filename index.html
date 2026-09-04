@@ -5,17 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="google-site-verification" content="8BH_NNEO3x-jZFEgvoOuudammrVaZD3VgQr-EyKPSq8">
-<meta name="description" content="Kashif — Web Developer and AI Learner. Explore my projects, skills, education and personal journey.">
-<meta name="keywords" content="Kashif, Web Developer, AI Learner, Portfolio, HTML, CSS, JavaScript">
-<meta name="author" content="Kashif">
+<meta name="description" content="Kashif's personal website and portfolio.">
 <meta name="robots" content="index, follow">
 
-<title>Kashif — Web Developer & AI Learner</title>
+<title>Kashif | Personal Portfolio</title>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -24,784 +20,536 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #050816;
-    color: #f8fafc;
-    line-height: 1.6;
-    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: #f1f5f9;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    width: 450px;
-    height: 450px;
-    background: #2563eb;
-    filter: blur(180px);
-    opacity: 0.15;
-    top: -150px;
-    left: -150px;
-    pointer-events: none;
-    z-index: -1;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    width: 450px;
-    height: 450px;
-    background: #9333ea;
-    filter: blur(180px);
-    opacity: 0.12;
-    bottom: -150px;
-    right: -150px;
-    pointer-events: none;
-    z-index: -1;
-}
-
-/* NAVIGATION */
-
-nav {
-    position: sticky;
-    top: 15px;
-    width: 92%;
-    max-width: 1050px;
-    margin: 15px auto 0;
-    padding: 14px 20px;
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid rgba(148, 163, 184, 0.15);
-    border-radius: 18px;
-    backdrop-filter: blur(15px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.logo {
-    color: white;
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: #60a5fa;
-}
-
-.nav-links {
-    display: flex;
-    gap: 8px;
-}
-
-.nav-links a {
-    color: #cbd5e1;
+a {
+    color: inherit;
     text-decoration: none;
-    padding: 9px 12px;
-    border-radius: 10px;
-    font-size: 14px;
-    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    background: rgba(96, 165, 250, 0.12);
-    color: #60a5fa;
-}
-
-/* GENERAL */
-
-section {
+/* MAIN */
+.container {
     width: 92%;
-    max-width: 1050px;
+    max-width: 1100px;
     margin: auto;
-    padding: 100px 0;
 }
 
-.section-label {
-    color: #60a5fa;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+/* COVER */
+.cover {
+    height: 330px;
+    position: relative;
+    border-radius: 0 0 18px 18px;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(2, 6, 23, 0.25), rgba(2, 6, 23, 0.7)),
+        url("cover.jpg") center/cover;
 }
 
-.section-title {
-    font-size: 40px;
-    margin-bottom: 45px;
+.cover-text {
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
 }
 
-.glass {
-    background: rgba(15, 23, 42, 0.65);
-    border: 1px solid rgba(148, 163, 184, 0.13);
-    border-radius: 22px;
-    backdrop-filter: blur(12px);
+.cover-text h1 {
+    font-size: 34px;
+    margin: 0;
 }
 
-/* HERO */
-
-.hero {
-    min-height: 88vh;
-    display: grid;
-    grid-template-columns: 1.4fr 0.8fr;
-    align-items: center;
-    gap: 60px;
-    padding-top: 80px;
+.cover-text p {
+    margin: 8px;
+    color: #cbd5e1;
 }
 
-.hero-small {
-    color: #60a5fa;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+/* PROFILE INFO */
+.profile-section {
+    background: #1e293b;
+    border-radius: 0 0 18px 18px;
+    padding: 25px;
+    position: relative;
 }
 
-.hero h1 {
-    font-size: clamp(50px, 8vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -4px;
-    margin-bottom: 25px;
+.profile-picture {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #1e293b;
+    background: #0f172a;
+    position: absolute;
+    left: 35px;
+    top: -100px;
 }
 
-.hero h1 span {
-    background: linear-gradient(90deg, #60a5fa, #a78bfa);
-    -webkit-background-clip: text;
-    color: transparent;
+.profile-info {
+    margin-left: 190px;
 }
 
-.hero-description {
+.profile-info h2 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.profile-info p {
     color: #94a3b8;
-    font-size: 18px;
-    max-width: 650px;
-    margin-bottom: 30px;
+    margin: 8px 0;
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.verified {
+    color: #3b82f6;
+    font-size: 20px;
+}
+
+/* BUTTONS */
+.profile-actions {
+    position: absolute;
+    right: 25px;
+    top: 25px;
 }
 
 .btn {
     display: inline-block;
-    padding: 13px 20px;
-    border-radius: 11px;
-    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin: 4px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.btn-primary {
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+.primary {
+    background: #2563eb;
     color: white;
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-}
-
-.btn-secondary {
-    color: #cbd5e1;
-    border: 1px solid #334155;
-}
-
-.btn-secondary:hover {
-    border-color: #60a5fa;
+.secondary {
+    background: #334155;
     color: white;
 }
 
-/* PROFILE */
-
-.profile-box {
-    padding: 25px;
-    text-align: center;
-    transform: rotate(2deg);
-}
-
-.profile-inner {
-    background: #0f172a;
-    border-radius: 18px;
-    padding: 35px 20px;
-    transform: rotate(-2deg);
-}
-
-.profile-placeholder {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 25px;
-    border-radius: 50%;
-    background:
-        radial-gradient(circle at 30% 30%, #60a5fa, transparent 35%),
-        linear-gradient(135deg, #1e293b, #111827);
-    border: 3px solid #60a5fa;
+/* NAV */
+.tabs {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 65px;
-}
-
-.profile-inner h3 {
-    font-size: 25px;
-}
-
-.profile-inner p {
-    color: #94a3b8;
-    margin-top: 5px;
-}
-
-/* ABOUT */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 25px;
-}
-
-.about-card {
-    padding: 30px;
-}
-
-.about-card p {
-    color: #94a3b8;
-    margin-bottom: 15px;
-}
-
-.highlight {
-    color: white;
-    font-weight: bold;
-}
-
-/* STATS */
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
     margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #334155;
+    flex-wrap: wrap;
 }
 
-.stat {
-    padding: 22px;
-    text-align: center;
+.tabs a {
+    color: #94a3b8;
+    padding-bottom: 10px;
 }
 
-.stat h3 {
-    font-size: 30px;
+.tabs a:hover {
     color: #60a5fa;
 }
 
-.stat p {
+/* CONTENT */
+.content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    padding: 25px 0 60px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.info {
+    color: #94a3b8;
+    padding: 9px 0;
+}
+
+/* SKILLS */
+.skill {
+    margin: 15px 0;
+}
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.bar {
+    height: 7px;
+    background: #0f172a;
+    border-radius: 10px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #3b82f6;
+}
+
+/* POST */
+.post-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.small-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #0f172a;
+}
+
+.post-name {
+    font-weight: bold;
+}
+
+.post-time {
     color: #94a3b8;
     font-size: 13px;
 }
 
-/* SKILLS */
-
-.skills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
-
-.skill {
-    padding: 25px;
-    transition: 0.3s;
-}
-
-.skill:hover {
-    transform: translateY(-6px);
-    border-color: #3b82f6;
-}
-
-.skill-icon {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-.skill h3 {
-    margin-bottom: 8px;
-}
-
-.skill p {
-    color: #94a3b8;
-    font-size: 14px;
+.post-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    max-height: 350px;
+    object-fit: cover;
 }
 
 /* PROJECTS */
-
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 15px;
 }
 
 .project {
-    padding: 30px;
-    transition: 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-7px);
-}
-
-.project-number {
-    color: #475569;
-    font-size: 14px;
-    margin-bottom: 35px;
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 12px;
 }
 
 .project h3 {
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-
-.project p {
-    color: #94a3b8;
-    margin-bottom: 22px;
-}
-
-.project-link {
     color: #60a5fa;
-    text-decoration: none;
-    font-weight: bold;
+    margin-top: 0;
 }
 
-.project-link:hover {
-    color: white;
-}
-
-/* PHOTOS */
-
-.photo-gallery {
+/* GALLERY */
+.gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 7px;
 }
 
-.photo {
-    min-height: 240px;
-    border-radius: 18px;
-    border: 1px dashed #334155;
-    background: linear-gradient(135deg, #111827, #1e293b);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.gallery img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #0f172a;
+}
+
+footer {
+    text-align: center;
     color: #64748b;
-    font-size: 16px;
-}
-
-/* EDUCATION */
-
-.education {
     padding: 30px;
 }
 
-.education h3 {
-    color: #60a5fa;
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.education p {
-    color: #94a3b8;
-}
-
-/* CONTACT */
-
-.contact-box {
-    padding: 45px;
-    text-align: center;
-}
-
-.contact-box h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.contact-box p {
-    color: #94a3b8;
-    max-width: 600px;
-    margin: 0 auto 25px;
-}
-
-/* FOOTER */
-
-footer {
-    width: 92%;
-    max-width: 1050px;
-    margin: 0 auto 25px;
-    padding: 25px;
-    text-align: center;
-    color: #64748b;
-    border-top: 1px solid #1e293b;
-}
-
 /* MOBILE */
+@media (max-width: 750px) {
 
-@media (max-width: 800px) {
-
-    nav {
-        width: 94%;
+    .cover {
+        height: 250px;
     }
 
-    .nav-links {
-        display: none;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
+    .profile-section {
         text-align: center;
-        gap: 45px;
+        padding-top: 85px;
     }
 
-    .hero h1 {
-        letter-spacing: -2px;
+    .profile-picture {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -85px;
+        width: 140px;
+        height: 140px;
     }
 
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
+    .profile-info {
+        margin-left: 0;
     }
 
-    .buttons {
+    .profile-actions {
+        position: static;
+        margin-top: 15px;
+    }
+
+    .tabs {
         justify-content: center;
+        gap: 15px;
     }
 
-    .about-grid {
+    .content {
         grid-template-columns: 1fr;
-    }
-
-    .skills {
-        grid-template-columns: 1fr 1fr;
     }
 
     .projects {
         grid-template-columns: 1fr;
     }
-
-    .photo-gallery {
-        grid-template-columns: 1fr;
-    }
 }
-
-@media (max-width: 500px) {
-
-    .stats {
-        grid-template-columns: 1fr;
-    }
-
-    .skills {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-    }
-
-    .profile-placeholder {
-        width: 150px;
-        height: 150px;
-        font-size: 50px;
-    }
-
-    .contact-box {
-        padding: 30px 20px;
-    }
-
-    .contact-box h2 {
-        font-size: 32px;
-    }
-}
-
 </style>
 
 </head>
 
 <body>
 
-<nav>
+<div class="container">
 
-<div class="logo">
-KASHIF<span>.</span>
+<!-- COVER PHOTO -->
+<header class="cover">
+
+    <div class="cover-text">
+        <h1>Dream. Learn. Build. Repeat.</h1>
+        <p>Web Developer & AI Learner</p>
+    </div>
+
+</header>
+
+
+<!-- PROFILE -->
+
+<div class="profile-section">
+
+    <!-- Apni photo profile.jpg ke naam se upload karna -->
+    <img src="profile.jpg" alt="Kashif Profile Picture" class="profile-picture">
+
+    <div class="profile-info">
+
+        <h2>
+            Kashif
+            <span class="verified">✓</span>
+        </h2>
+
+        <p>Web Developer • AI Learner</p>
+
+        <p>
+            I.Com 2nd Year Student | Passionate about
+            Web Development, JavaScript and AI.
+        </p>
+
+        <p>📍 Pakistan</p>
+
+    </div>
+
+    <div class="profile-actions">
+        <a href="#about" class="btn primary">About Me</a>
+        <a href="#contact" class="btn secondary">Contact</a>
+    </div>
+
+
+    <div class="tabs">
+        <a href="#home">Posts</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#photos">Photos</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+
 </div>
 
-<div class="nav-links">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#photos">Photos</a>
-<a href="#contact">Contact</a>
+
+<!-- CONTENT -->
+
+<div class="content">
+
+<!-- LEFT SIDE -->
+
+<aside>
+
+<div class="card">
+
+<h3>About</h3>
+
+<div class="info">🎓 I.Com 2nd Year Student</div>
+<div class="info">💻 Web Developer</div>
+<div class="info">🤖 AI Learner</div>
+<div class="info">📍 Pakistan</div>
+
 </div>
 
-</nav>
+
+<div class="card" id="skills">
+
+<h3>Skills</h3>
+
+<div class="skill">
+<div class="skill-top">
+<span>HTML</span>
+<span>90%</span>
+</div>
+<div class="bar">
+<div class="progress" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-top">
+<span>CSS</span>
+<span>80%</span>
+</div>
+<div class="bar">
+<div class="progress" style="width:80%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-top">
+<span>JavaScript</span>
+<span>Learning</span>
+</div>
+<div class="bar">
+<div class="progress" style="width:50%"></div>
+</div>
+</div>
+
+</div>
 
 
-<section id="home" class="hero">
+<div class="card" id="photos">
+
+<h3>Photos</h3>
+
+<div class="gallery">
+<img src="photo1.jpg" alt="Kashif Photo">
+<img src="photo2.jpg" alt="Kashif Photo">
+<img src="photo3.jpg" alt="Kashif Photo">
+</div>
+
+</div>
+
+</aside>
+
+
+<!-- RIGHT SIDE -->
+
+<main>
+
+<div class="card" id="home">
+
+<div class="post-head">
+
+<img src="profile.jpg" class="small-photo" alt="Kashif">
 
 <div>
-
-<p class="hero-small">WEB DEVELOPER • AI LEARNER</p>
-
-<h1>
-Building my <span>digital future.</span>
-</h1>
-
-<p class="hero-description">
-I'm Kashif — an I.Com 2nd Year student learning web development,
-JavaScript and AI. I enjoy turning ideas into clean and useful
-digital experiences.
-</p>
-
-<div class="buttons">
-
-<a class="btn btn-primary" href="#projects">
-Explore My Work →
-</a>
-
-<a class="btn btn-secondary" href="#about">
-More About Me
-</a>
-
+<div class="post-name">Kashif</div>
+<div class="post-time">Web Developer & AI Learner</div>
 </div>
 
 </div>
-
-<div class="profile-box glass">
-
-<div class="profile-inner">
-
-<div class="profile-placeholder">👤</div>
-
-<h3>Kashif</h3>
-
-<p>Web Developer & AI Learner</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="about">
-
-<p class="section-label">01 — ABOUT</p>
-
-<h2 class="section-title">A little about me.</h2>
-
-<div class="about-grid">
-
-<div class="about-card glass">
 
 <p>
-Hello! I'm <span class="highlight">Kashif</span>, a student
-who is passionate about technology and learning new digital skills.
+Working on my projects and learning new things every day. 🚀
 </p>
 
 <p>
-I'm currently studying <span class="highlight">I.Com — 2nd Year</span>
-while learning HTML, CSS, JavaScript and AI tools.
+The journey of a thousand miles begins with a single line of code.
+</p>
+
+<img src="cover.jpg" class="post-image" alt="My Web Development Journey">
+
+</div>
+
+
+<div class="card" id="about">
+
+<h3>About Kashif</h3>
+
+<p>
+Hello! I'm Kashif, a student and aspiring web developer.
+I'm currently studying I.Com while building my skills in
+HTML, CSS, JavaScript and AI.
 </p>
 
 <p>
-My goal is simple: keep learning, keep building and eventually
-create useful digital products and websites.
+My goal is to learn continuously and create useful websites
+and digital projects.
 </p>
 
 </div>
 
-<div class="about-card glass">
 
-<p class="highlight">Currently focused on:</p>
+<div class="card" id="projects">
 
-<p>→ Web Development</p>
-<p>→ JavaScript</p>
-<p>→ Artificial Intelligence</p>
-<p>→ Building Real Projects</p>
-
-</div>
-
-</div>
-
-<div class="stats">
-
-<div class="stat glass">
-<h3>02+</h3>
-<p>Projects</p>
-</div>
-
-<div class="stat glass">
-<h3>04</h3>
-<p>Core Skills</p>
-</div>
-
-<div class="stat glass">
-<h3>∞</h3>
-<p>Learning Mindset</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="education">
-
-<p class="section-label">02 — EDUCATION</p>
-
-<h2 class="section-title">My Education.</h2>
-
-<div class="education glass">
-
-<h3>I.Com — 2nd Year</h3>
-
-<p>
-Currently studying Intermediate in Commerce while building
-my skills in web development, technology and AI.
-</p>
-
-</div>
-
-</section>
-
-
-<section id="skills">
-
-<p class="section-label">03 — SKILLS</p>
-
-<h2 class="section-title">Things I'm learning.</h2>
-
-<div class="skills">
-
-<div class="skill glass">
-<div class="skill-icon">🌐</div>
-<h3>HTML</h3>
-<p>Building clean and structured web pages.</p>
-</div>
-
-<div class="skill glass">
-<div class="skill-icon">🎨</div>
-<h3>CSS</h3>
-<p>Creating responsive and modern designs.</p>
-</div>
-
-<div class="skill glass">
-<div class="skill-icon">⚡</div>
-<h3>JavaScript</h3>
-<p>Learning interactive web experiences.</p>
-</div>
-
-<div class="skill glass">
-<div class="skill-icon">🤖</div>
-<h3>AI Tools</h3>
-<p>Exploring AI tools for learning and development.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="projects">
-
-<p class="section-label">04 — PROJECTS</p>
-
-<h2 class="section-title">Selected work.</h2>
+<h3>My Projects</h3>
 
 <div class="projects">
 
-<div class="project glass">
-
-<p class="project-number">PROJECT 01</p>
-
+<div class="project">
 <h3>Personal Portfolio</h3>
-
 <p>
-My personal website showcasing my skills,
-projects and learning journey.
+My personal website where I share my skills,
+projects, photos and journey.
 </p>
-
-<a class="project-link" href="#home">
-Current Website →
-</a>
-
 </div>
 
-<div class="project glass">
-
-<p class="project-number">PROJECT 02</p>
-
+<div class="project">
 <h3>Business Landing Page</h3>
-
 <p>
-A responsive business landing page created
-as a web development practice project.
+A responsive website created as a web development project.
 </p>
 
-<a class="project-link" href="business.html">
-View Live Project →
+<a href="business.html" class="btn primary">
+View Project
+</a>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card" id="contact">
+
+<h3>Contact Me</h3>
+
+<p>
+Want to connect with me or discuss a project?
+</p>
+
+<a href="mailto:example@email.com" class="btn primary">
+Send Message
 </a>
 
 </div>
 
-</div>
-
-</section>
-
-
-<section id="photos">
-
-<p class="section-label">05 — PHOTOS</p>
-
-<h2 class="section-title">My gallery.</h2>
-
-<div class="photo-gallery">
-
-<div class="photo">📸 Photo Coming Soon</div>
-
-<div class="photo">📸 Photo Coming Soon</div>
-
-<div class="photo">📸 Photo Coming Soon</div>
+</main>
 
 </div>
 
-</section>
-
-
-<section id="contact">
-
-<div class="contact-box glass">
-
-<p class="section-label">06 — CONTACT</p>
-
-<h2>Let's connect.</h2>
-
-<p>
-Have an idea, project or just want to say hello?
-I'm always interested in learning and connecting.
-</p>
-
-<a class="btn btn-primary" href="mailto:example@email.com">
-Send Me a Message →
-</a>
-
 </div>
-
-</section>
 
 
 <footer>
-
-<p>
-© 2026 Kashif. Built while learning & growing. 🚀
-</p>
-
+© 2026 Kashif — Web Developer & AI Learner 🚀
 </footer>
 
 </body>
