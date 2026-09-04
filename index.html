@@ -9,15 +9,15 @@
 
 <meta name="google-site-verification" content="8BH_NNEO3x-jZFEgvoOuudammrVaZD3VgQr-EyKPSq8" />
 
-<meta name="description" content="Kashif's personal portfolio showcasing web development projects, HTML, CSS, JavaScript and AI learning journey.">
+<meta name="description" content="Official personal website of Kashif. Web Developer and AI Learner from Pakistan, sharing projects, skills, education and learning journey.">
 
-<meta name="keywords" content="Kashif, Kashif web developer, web development, portfolio, HTML, CSS, JavaScript, AI learner">
+<meta name="keywords" content="Kashif, Kashif official website, Kashif web developer, Kashif portfolio, HTML, CSS, JavaScript, AI learner">
 
 <meta name="author" content="Kashif">
 
 <meta name="robots" content="index, follow">
 
-<title>Kashif | Web Developer & AI Learner</title>
+<title>Kashif | Personal Website</title>
 
 <style>
 
@@ -48,7 +48,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 5px;
+    margin: 4px;
     padding: 8px;
     display: inline-block;
 }
@@ -58,22 +58,45 @@ nav a:hover {
 }
 
 section {
-    padding: 60px 20px;
-    max-width: 900px;
+    padding: 70px 20px;
+    max-width: 1000px;
     margin: auto;
 }
 
 .hero {
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    margin-bottom: 20px;
+    object-fit: cover;
+    background-color: #1e293b;
+}
+
+.photo-placeholder {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    background-color: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
 .hero h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
+    font-size: 48px;
+    margin: 10px;
 }
 
 .hero h2 {
@@ -82,7 +105,7 @@ section {
 }
 
 .hero p {
-    max-width: 650px;
+    max-width: 700px;
     font-size: 18px;
     line-height: 1.7;
 }
@@ -103,19 +126,25 @@ section {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 34px;
     margin-bottom: 30px;
 }
 
 .card {
     background-color: #1e293b;
-    padding: 25px;
+    padding: 28px;
     margin: 15px 0;
     border-radius: 12px;
 }
 
+.card p {
+    line-height: 1.7;
+    font-size: 17px;
+}
+
 .skills-container,
-.projects-container {
+.projects-container,
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -138,6 +167,19 @@ h2 {
 .skill-card p,
 .project-card p {
     line-height: 1.6;
+}
+
+.gallery-item {
+    width: 250px;
+    height: 250px;
+    background-color: #1e293b;
+    border: 2px dashed #38bdf8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    padding: 20px;
 }
 
 .contact-form {
@@ -181,12 +223,12 @@ footer {
 @media (max-width: 600px) {
 
     nav a {
-        font-size: 13px;
+        font-size: 12px;
         margin: 2px;
     }
 
     .hero h1 {
-        font-size: 34px;
+        font-size: 35px;
     }
 
     .hero h2 {
@@ -198,11 +240,12 @@ footer {
     }
 
     section {
-        padding: 50px 15px;
+        padding: 55px 15px;
     }
 
     .skill-card,
-    .project-card {
+    .project-card,
+    .gallery-item {
         width: 100%;
         max-width: 350px;
     }
@@ -224,33 +267,36 @@ footer {
 
 <a href="#home">Home</a>
 <a href="#about">About</a>
+<a href="#education">Education</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#photos">Photos</a>
 <a href="#contact">Contact</a>
 
 </nav>
 
 <section id="home" class="hero">
 
+<div class="photo-placeholder">
+📸
+</div>
+
 <h1>Hi, I'm Kashif 👋</h1>
 
 <h2>Web Developer & AI Learner</h2>
 
 <p>
-I'm building my skills in modern web development
-and AI to create clean, useful and user-friendly websites.
+Welcome to my official personal website. I'm building my skills
+in web development and artificial intelligence while creating
+modern and useful digital projects.
 </p>
 
-<p>
-Currently learning. Constantly improving. 🚀
-</p>
+<a class="button" href="#about">
+About Me
+</a>
 
 <a class="button" href="#projects">
 View My Projects
-</a>
-
-<a class="button" href="#contact">
-Let's Connect
 </a>
 
 </section>
@@ -262,15 +308,36 @@ Let's Connect
 <div class="card">
 
 <p>
-Hello! I'm Kashif, a beginner web developer
-who is passionate about technology and learning.
+Hello! I'm Kashif, a student and aspiring web developer
+with a strong interest in technology, web development
+and artificial intelligence.
 </p>
 
 <p>
-I'm currently learning HTML, CSS, JavaScript
-and AI tools. My goal is to develop strong
-digital skills and create modern websites
-for real-world projects.
+I am currently learning HTML, CSS, JavaScript and AI tools.
+My goal is to keep improving my digital skills and build
+modern, useful websites for real-world projects.
+</p>
+
+<p>
+Currently learning. Constantly improving. 🚀
+</p>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>I.Com — 2nd Year</h3>
+
+<p>
+Currently studying Intermediate in Commerce while also
+developing my skills in technology and web development.
 </p>
 
 </div>
@@ -339,11 +406,11 @@ to improve my learning and development.
 
 <div class="project-card">
 
-<h3>Personal Portfolio</h3>
+<h3>Personal Website</h3>
 
 <p>
-A modern personal portfolio website
-built while learning web development.
+My official personal website where I share
+my skills, projects and learning journey.
 </p>
 
 </div>
@@ -357,7 +424,7 @@ A responsive business website created
 as a web development practice project.
 </p>
 
-<a class="button" href="./business.html">
+<a class="button" href="business.html">
 View Project
 </a>
 
@@ -365,13 +432,39 @@ View Project
 
 <div class="project-card">
 
-<h3>Coming Soon</h3>
+<h3>More Projects</h3>
 
 <p>
 More genuine projects will be added
-as I continue learning.
+as I continue learning and improving.
 </p>
 
+</div>
+
+</div>
+
+</section>
+
+<section id="photos">
+
+<h2>My Photos</h2>
+
+<p>
+Photos and memories will be added here.
+</p>
+
+<div class="gallery">
+
+<div class="gallery-item">
+Photo Coming Soon 📸
+</div>
+
+<div class="gallery-item">
+Photo Coming Soon 📸
+</div>
+
+<div class="gallery-item">
+Photo Coming Soon 📸
 </div>
 
 </div>
@@ -407,7 +500,7 @@ Send Message
 </p>
 
 <p>
-Web Developer & AI Learner
+Official Personal Website | Web Developer & AI Learner
 </p>
 
 </footer>
