@@ -1,260 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="8BH_NNEO3x-jZFEgvoOuudammrVaZD3VgQr-EyKPSq8" />
-
-<meta name="description" content="Official personal website of Kashif. Web Developer and AI Learner from Pakistan, sharing projects, skills, education and learning journey.">
-
-<meta name="keywords" content="Kashif, Kashif official website, Kashif web developer, Kashif portfolio, HTML, CSS, JavaScript, AI learner">
-
+<meta name="google-site-verification" content="8BH_NNEO3x-jZFEgvoOuudammrVaZD3VgQr-EyKPSq8">
+<meta name="description" content="Kashif — Web Developer and AI Learner. Explore my projects, skills, education and personal journey.">
+<meta name="keywords" content="Kashif, Web Developer, AI Learner, Portfolio, HTML, CSS, JavaScript">
 <meta name="author" content="Kashif">
-
 <meta name="robots" content="index, follow">
 
-<title>Kashif | Personal Website</title>
+<title>Kashif — Web Developer & AI Learner</title>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
-* {
-    box-sizing: border-box;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050816;
+    color: #f8fafc;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0f172a;
-    color: white;
-    text-align: center;
+body::before {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: #2563eb;
+    filter: blur(180px);
+    opacity: 0.15;
+    top: -150px;
+    left: -150px;
+    pointer-events: none;
+    z-index: -1;
 }
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: #9333ea;
+    filter: blur(180px);
+    opacity: 0.12;
+    bottom: -150px;
+    right: -150px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* NAVIGATION */
 
 nav {
-    background-color: #020617;
-    padding: 15px 5px;
     position: sticky;
-    top: 0;
-    z-index: 10;
+    top: 15px;
+    width: 92%;
+    max-width: 1050px;
+    margin: 15px auto 0;
+    padding: 14px 20px;
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 18px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-nav a {
+.logo {
     color: white;
-    text-decoration: none;
-    margin: 4px;
-    padding: 8px;
-    display: inline-block;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-nav a:hover {
-    color: #38bdf8;
+.logo span {
+    color: #60a5fa;
 }
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(96, 165, 250, 0.12);
+    color: #60a5fa;
+}
+
+/* GENERAL */
 
 section {
-    padding: 70px 20px;
-    max-width: 1000px;
+    width: 92%;
+    max-width: 1050px;
     margin: auto;
+    padding: 100px 0;
 }
+
+.section-label {
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 45px;
+}
+
+.glass {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(148, 163, 184, 0.13);
+    border-radius: 22px;
+    backdrop-filter: blur(12px);
+}
+
+/* HERO */
 
 .hero {
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-height: 88vh;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
     align-items: center;
+    gap: 60px;
+    padding-top: 80px;
 }
 
-.profile-photo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid #38bdf8;
-    margin-bottom: 20px;
-    object-fit: cover;
-    background-color: #1e293b;
-}
-
-.photo-placeholder {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid #38bdf8;
-    background-color: #1e293b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 55px;
-    margin-bottom: 20px;
+.hero-small {
+    color: #60a5fa;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin: 10px;
+    font-size: clamp(50px, 8vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
 }
 
-.hero h2 {
-    color: #38bdf8;
+.hero h1 span {
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-description {
+    color: #94a3b8;
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 11px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    color: #cbd5e1;
+    border: 1px solid #334155;
+}
+
+.btn-secondary:hover {
+    border-color: #60a5fa;
+    color: white;
+}
+
+/* PROFILE */
+
+.profile-box {
+    padding: 25px;
+    text-align: center;
+    transform: rotate(2deg);
+}
+
+.profile-inner {
+    background: #0f172a;
+    border-radius: 18px;
+    padding: 35px 20px;
+    transform: rotate(-2deg);
+}
+
+.profile-placeholder {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 30% 30%, #60a5fa, transparent 35%),
+        linear-gradient(135deg, #1e293b, #111827);
+    border: 3px solid #60a5fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+}
+
+.profile-inner h3 {
     font-size: 25px;
 }
 
-.hero p {
-    max-width: 700px;
-    font-size: 18px;
-    line-height: 1.7;
+.profile-inner p {
+    color: #94a3b8;
+    margin-top: 5px;
 }
 
-.button {
-    display: inline-block;
-    background-color: #38bdf8;
-    color: #020617;
-    padding: 13px 22px;
-    margin: 8px;
-    border-radius: 8px;
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.about-card {
+    padding: 30px;
+}
+
+.about-card p {
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: white;
+    font-weight: bold;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.stat {
+    padding: 22px;
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 30px;
+    color: #60a5fa;
+}
+
+.stat p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* SKILLS */
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.skill {
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+}
+
+.skill-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.skill h3 {
+    margin-bottom: 8px;
+}
+
+.skill p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.project {
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-7px);
+}
+
+.project-number {
+    color: #475569;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.project h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #94a3b8;
+    margin-bottom: 22px;
+}
+
+.project-link {
+    color: #60a5fa;
     text-decoration: none;
     font-weight: bold;
 }
 
-.button:hover {
-    background-color: white;
+.project-link:hover {
+    color: white;
 }
 
-h2 {
-    font-size: 34px;
-    margin-bottom: 30px;
+/* PHOTOS */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
-.card {
-    background-color: #1e293b;
-    padding: 28px;
-    margin: 15px 0;
-    border-radius: 12px;
-}
-
-.card p {
-    line-height: 1.7;
-    font-size: 17px;
-}
-
-.skills-container,
-.projects-container,
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.skill-card,
-.project-card {
-    background-color: #1e293b;
-    width: 260px;
-    padding: 25px;
-    border-radius: 12px;
-}
-
-.skill-card h3,
-.project-card h3 {
-    color: #38bdf8;
-}
-
-.skill-card p,
-.project-card p {
-    line-height: 1.6;
-}
-
-.gallery-item {
-    width: 250px;
-    height: 250px;
-    background-color: #1e293b;
-    border: 2px dashed #38bdf8;
-    border-radius: 12px;
+.photo {
+    min-height: 240px;
+    border-radius: 18px;
+    border: 1px dashed #334155;
+    background: linear-gradient(135deg, #111827, #1e293b);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #94a3b8;
-    padding: 20px;
-}
-
-.contact-form {
-    background-color: #1e293b;
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 95%;
-    padding: 13px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 7px;
+    color: #64748b;
     font-size: 16px;
 }
 
-.contact-form textarea {
-    height: 120px;
+/* EDUCATION */
+
+.education {
+    padding: 30px;
 }
 
-.contact-form button {
-    background-color: #38bdf8;
-    color: #020617;
-    border: none;
-    padding: 13px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
+.education h3 {
+    color: #60a5fa;
+    font-size: 24px;
+    margin-bottom: 8px;
 }
+
+.education p {
+    color: #94a3b8;
+}
+
+/* CONTACT */
+
+.contact-box {
+    padding: 45px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+/* FOOTER */
 
 footer {
-    background-color: #020617;
+    width: 92%;
+    max-width: 1050px;
+    margin: 0 auto 25px;
     padding: 25px;
-    margin-top: 30px;
+    text-align: center;
+    color: #64748b;
+    border-top: 1px solid #1e293b;
 }
 
-@media (max-width: 600px) {
+/* MOBILE */
 
-    nav a {
-        font-size: 12px;
-        margin: 2px;
+@media (max-width: 800px) {
+
+    nav {
+        width: 94%;
     }
 
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero h2 {
-        font-size: 21px;
-    }
-
-    .hero p {
-        font-size: 16px;
+    .nav-links {
+        display: none;
     }
 
     section {
-        padding: 55px 15px;
+        padding: 75px 0;
     }
 
-    .skill-card,
-    .project-card,
-    .gallery-item {
-        width: 100%;
-        max-width: 350px;
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 45px;
     }
 
-    .button {
-        width: 90%;
-        max-width: 280px;
+    .hero h1 {
+        letter-spacing: -2px;
     }
 
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .profile-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 50px;
+    }
+
+    .contact-box {
+        padding: 30px 20px;
+    }
+
+    .contact-box h2 {
+        font-size: 32px;
+    }
 }
 
 </style>
@@ -265,256 +526,283 @@ footer {
 
 <nav>
 
+<div class="logo">
+KASHIF<span>.</span>
+</div>
+
+<div class="nav-links">
 <a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#education">Education</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#photos">Photos</a>
 <a href="#contact">Contact</a>
+</div>
 
 </nav>
 
+
 <section id="home" class="hero">
 
-<div class="photo-placeholder">
-📸
-</div>
+<div>
 
-<h1>Hi, I'm Kashif 👋</h1>
+<p class="hero-small">WEB DEVELOPER • AI LEARNER</p>
 
-<h2>Web Developer & AI Learner</h2>
+<h1>
+Building my <span>digital future.</span>
+</h1>
 
-<p>
-Welcome to my official personal website. I'm building my skills
-in web development and artificial intelligence while creating
-modern and useful digital projects.
+<p class="hero-description">
+I'm Kashif — an I.Com 2nd Year student learning web development,
+JavaScript and AI. I enjoy turning ideas into clean and useful
+digital experiences.
 </p>
 
-<a class="button" href="#about">
-About Me
+<div class="buttons">
+
+<a class="btn btn-primary" href="#projects">
+Explore My Work →
 </a>
 
-<a class="button" href="#projects">
-View My Projects
+<a class="btn btn-secondary" href="#about">
+More About Me
 </a>
+
+</div>
+
+</div>
+
+<div class="profile-box glass">
+
+<div class="profile-inner">
+
+<div class="profile-placeholder">👤</div>
+
+<h3>Kashif</h3>
+
+<p>Web Developer & AI Learner</p>
+
+</div>
+
+</div>
 
 </section>
+
 
 <section id="about">
 
-<h2>About Me</h2>
+<p class="section-label">01 — ABOUT</p>
 
-<div class="card">
+<h2 class="section-title">A little about me.</h2>
+
+<div class="about-grid">
+
+<div class="about-card glass">
 
 <p>
-Hello! I'm Kashif, a student and aspiring web developer
-with a strong interest in technology, web development
-and artificial intelligence.
+Hello! I'm <span class="highlight">Kashif</span>, a student
+who is passionate about technology and learning new digital skills.
 </p>
 
 <p>
-I am currently learning HTML, CSS, JavaScript and AI tools.
-My goal is to keep improving my digital skills and build
-modern, useful websites for real-world projects.
+I'm currently studying <span class="highlight">I.Com — 2nd Year</span>
+while learning HTML, CSS, JavaScript and AI tools.
 </p>
 
 <p>
-Currently learning. Constantly improving. 🚀
+My goal is simple: keep learning, keep building and eventually
+create useful digital products and websites.
 </p>
+
+</div>
+
+<div class="about-card glass">
+
+<p class="highlight">Currently focused on:</p>
+
+<p>→ Web Development</p>
+<p>→ JavaScript</p>
+<p>→ Artificial Intelligence</p>
+<p>→ Building Real Projects</p>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat glass">
+<h3>02+</h3>
+<p>Projects</p>
+</div>
+
+<div class="stat glass">
+<h3>04</h3>
+<p>Core Skills</p>
+</div>
+
+<div class="stat glass">
+<h3>∞</h3>
+<p>Learning Mindset</p>
+</div>
 
 </div>
 
 </section>
 
+
 <section id="education">
 
-<h2>Education</h2>
+<p class="section-label">02 — EDUCATION</p>
 
-<div class="card">
+<h2 class="section-title">My Education.</h2>
+
+<div class="education glass">
 
 <h3>I.Com — 2nd Year</h3>
 
 <p>
-Currently studying Intermediate in Commerce while also
-developing my skills in technology and web development.
+Currently studying Intermediate in Commerce while building
+my skills in web development, technology and AI.
 </p>
 
 </div>
 
 </section>
+
 
 <section id="skills">
 
-<h2>My Skills</h2>
+<p class="section-label">03 — SKILLS</p>
 
-<div class="skills-container">
+<h2 class="section-title">Things I'm learning.</h2>
 
-<div class="skill-card">
+<div class="skills">
 
+<div class="skill glass">
+<div class="skill-icon">🌐</div>
 <h3>HTML</h3>
-
-<p>
-I use HTML to create the structure
-of websites and web pages.
-</p>
-
+<p>Building clean and structured web pages.</p>
 </div>
 
-<div class="skill-card">
-
+<div class="skill glass">
+<div class="skill-icon">🎨</div>
 <h3>CSS</h3>
-
-<p>
-I use CSS to improve website design,
-layout and appearance.
-</p>
-
+<p>Creating responsive and modern designs.</p>
 </div>
 
-<div class="skill-card">
-
+<div class="skill glass">
+<div class="skill-icon">⚡</div>
 <h3>JavaScript</h3>
-
-<p>
-I'm learning JavaScript to add
-interactive features to websites.
-</p>
-
+<p>Learning interactive web experiences.</p>
 </div>
 
-<div class="skill-card">
-
+<div class="skill glass">
+<div class="skill-icon">🤖</div>
 <h3>AI Tools</h3>
-
-<p>
-I'm learning how to use AI tools
-to improve my learning and development.
-</p>
-
+<p>Exploring AI tools for learning and development.</p>
 </div>
 
 </div>
 
 </section>
 
+
 <section id="projects">
 
-<h2>My Projects</h2>
+<p class="section-label">04 — PROJECTS</p>
 
-<div class="projects-container">
+<h2 class="section-title">Selected work.</h2>
 
-<div class="project-card">
+<div class="projects">
 
-<h3>Personal Website</h3>
+<div class="project glass">
 
-<p>
-My official personal website where I share
-my skills, projects and learning journey.
-</p>
+<p class="project-number">PROJECT 01</p>
 
-</div>
-
-<div class="project-card">
-
-<h3>Business Landing Page</h3>
+<h3>Personal Portfolio</h3>
 
 <p>
-A responsive business website created
-as a web development practice project.
+My personal website showcasing my skills,
+projects and learning journey.
 </p>
 
-<a class="button" href="business.html">
-View Project
+<a class="project-link" href="#home">
+Current Website →
 </a>
 
 </div>
 
-<div class="project-card">
+<div class="project glass">
 
-<h3>More Projects</h3>
+<p class="project-number">PROJECT 02</p>
+
+<h3>Business Landing Page</h3>
 
 <p>
-More genuine projects will be added
-as I continue learning and improving.
+A responsive business landing page created
+as a web development practice project.
 </p>
+
+<a class="project-link" href="business.html">
+View Live Project →
+</a>
 
 </div>
 
 </div>
 
 </section>
+
 
 <section id="photos">
 
-<h2>My Photos</h2>
+<p class="section-label">05 — PHOTOS</p>
 
-<p>
-Photos and memories will be added here.
-</p>
+<h2 class="section-title">My gallery.</h2>
 
-<div class="gallery">
+<div class="photo-gallery">
 
-<div class="gallery-item">
-Photo Coming Soon 📸
-</div>
+<div class="photo">📸 Photo Coming Soon</div>
 
-<div class="gallery-item">
-Photo Coming Soon 📸
-</div>
+<div class="photo">📸 Photo Coming Soon</div>
 
-<div class="gallery-item">
-Photo Coming Soon 📸
-</div>
+<div class="photo">📸 Photo Coming Soon</div>
 
 </div>
 
 </section>
+
 
 <section id="contact">
 
-<h2>Contact Me</h2>
+<div class="contact-box glass">
 
-<div class="contact-form">
+<p class="section-label">06 — CONTACT</p>
 
-<input type="text" placeholder="Your Name">
+<h2>Let's connect.</h2>
 
-<input type="email" placeholder="Your Email">
+<p>
+Have an idea, project or just want to say hello?
+I'm always interested in learning and connecting.
+</p>
 
-<textarea placeholder="Your Message"></textarea>
-
-<br>
-
-<button onclick="sendMessage()">
-Send Message
-</button>
+<a class="btn btn-primary" href="mailto:example@email.com">
+Send Me a Message →
+</a>
 
 </div>
 
 </section>
+
 
 <footer>
 
 <p>
-© 2026 Kashif. All rights reserved.
-</p>
-
-<p>
-Official Personal Website | Web Developer & AI Learner
+© 2026 Kashif. Built while learning & growing. 🚀
 </p>
 
 </footer>
 
-<script>
-
-function sendMessage() {
-
-alert("Thank you for your message! 😊");
-
-}
-
-</script>
-
 </body>
-
 </html>
